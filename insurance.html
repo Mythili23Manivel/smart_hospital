@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar {
+            background: linear-gradient(90deg, #001f3f, #004080);
+            padding: 30px;
+            color: white;
+        }
+        .navbar img {
+            max-height: 80px;
+            margin-right: 15px;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 20px;
+        }
+        .info-box h2 {
+            margin-bottom: 20px;
+            color: #0056b3;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .footer {
+            background-color: #001f3f;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+        .footer a {
+            color: #ffcc00;
+        }
+        .footer a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Running Content -->
+    <div class="row bg-light p-2">
+        <div class="col-md-12 text-center">
+            <marquee>Get the best medical insurance plans tailored for you! For assistance, call: +91-422-4323999, 95665 95665, 82201 88844</marquee>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <!-- Top Bar -->
+    <div class="row navbar align-items-center">
+        <div class="col-md-6 d-flex align-items-center">
+            <img src="logo.png" alt="Logo">
+            <h3><b>JM HOSPITAL INSURANCE</b></h3>
+        </div>
+        <div class="col-md-6 text-right">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search Policies">
+                <button class="btn btn-dark" type="button" onclick="searchPolicies()">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div class="info-box">
+            <h2>Insurance Plans</h2>
+            <p>Explore our comprehensive medical insurance plans:</p>
+            <ul>
+                <li>Individual Health Insurance</li>
+                <li>Family Floater Plans</li>
+                <li>Critical Illness Insurance</li>
+                <li>Top-up Plans</li>
+            </ul>
+            <p><strong>Get started by contacting us!</strong></p>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary" onclick="scrollToFooter()">Contact Us</button>
+            </div>
+        </div>
+        <div class="info-box">
+            <h2>Claim Process</h2>
+            <p>Follow these steps to file a medical insurance claim:</p>
+            <ol>
+                <li>Notify us of your hospitalization.</li>
+                <li>Fill out the claim form accurately.</li>
+                <li>Submit all required documents.</li>
+                <li>Receive updates on your claim status.</li>
+            </ol>
+            <p><strong>Need assistance? Reach out to our support!</strong></p>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary" onclick="window.location.href='claim.php'">Claim</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer" id="contactFooter">
+    <p>&copy; 2023 Medical Insurance Company. All Rights Reserved.</p>
+    <div class="contact-info">
+        <p>Contact: +91-422-4323999</p>
+        <p>Follow us: <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+    </div>
+</footer>
+
+<script>
+    function searchPolicies() {
+        const query = document.getElementById('searchInput').value;
+        alert(`Searching for: ${query}`);
+        // Implement actual search functionality as needed
+    }
+
+    function scrollToFooter() {
+        document.getElementById('contactFooter').scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
