@@ -1,0 +1,135 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px; /* Max width of the container */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in total width */
+}
+
+h1 {
+    margin-bottom: 30px; /* Space below the heading */
+    color: #333;
+    text-align: center;
+    font-size: 28px; /* Slightly larger font size */
+    font-weight: 600;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between columns */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 20px); /* Two columns with a gap */
+    min-width: 300px; /* Minimum width to ensure readability */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-group button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.form-group button:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px;
+    }
+    
+    .form-group button {
+        font-size: 14px;
+    }
+}
+#chatbot img {
+    border-radius: 50%; /* Makes the button circular */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+}
